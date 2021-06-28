@@ -1,12 +1,9 @@
-﻿using System;
+﻿using CovidRapidApi.Domain.Models;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 using System.Threading.Tasks;
-using CovidRapidApi.Domain.Models;
-using Newtonsoft.Json;
 
 namespace CovidRapidApi.Domain.Services
 {
@@ -90,7 +87,7 @@ namespace CovidRapidApi.Domain.Services
                     }
                 });
 
-                var distinctContinents = continentValues.Select(x => x.Continent).Distinct().OrderBy(x => x); 
+                var distinctContinents = continentValues.Select(x => x.Continent).Distinct().OrderBy(x => x);
 
                 foreach (var continent in distinctContinents)
                 {
@@ -133,7 +130,7 @@ namespace CovidRapidApi.Domain.Services
         private int GetPercentage(long value, long total)
         {
             if (value == 0 || total == 0) return 0;
-            var percentage =  ((double)value / total) * 100;
+            var percentage = ((double)value / total) * 100;
             return Convert.ToInt32(percentage);
         }
     }

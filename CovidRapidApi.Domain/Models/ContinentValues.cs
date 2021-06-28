@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CovidRapidApi.Domain.Models
+﻿namespace CovidRapidApi.Domain.Models
 {
     public class ContinentValues
     {

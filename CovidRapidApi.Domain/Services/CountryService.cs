@@ -1,12 +1,9 @@
-﻿using System;
+﻿using CovidRapidApi.Domain.Models;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-using CovidRapidApi.Domain.Models;
-using Newtonsoft.Json;
 
 namespace CovidRapidApi.Domain.Services
 {
@@ -80,7 +77,7 @@ namespace CovidRapidApi.Domain.Services
                     countryResults.Add(new CountryResults
                     {
                         Continent = continent,
-                        Country ="",
+                        Country = "",
                         NewCases = new NewCases
                         {
                             Total = continentNewCasesTotal,
